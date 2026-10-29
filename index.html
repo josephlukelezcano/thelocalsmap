@@ -4,28 +4,42 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Locals Map · Jupiter, FL</title>
-  <meta name="description" content="Local spots in Jupiter, Florida, picked by locals.">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <meta name="description" content="Local spots in Jupiter, Tequesta and Palm Beach Gardens, picked by locals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
+        integrity="sha384-MinO0mNliZ3vwppuPOUnGa+iq619pfMhLVUXfC4LHwSCvF9H+6P/KO4Q7qBOYV5V" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <h1>The Locals Map</h1>
-    <p>Jupiter, FL · spots picked by locals</p>
+    <p>Jupiter · Tequesta · Palm Beach Gardens — spots picked by locals</p>
   </header>
 
   <main class="layout">
     <aside class="sidebar">
-      <h2>Spots</h2>
+      <h2>Marked Spots</h2>
       <ul id="spot-list" class="spot-list"></ul>
     </aside>
-    <div id="map" class="map" role="region" aria-label="Map of Jupiter, Florida"></div>
+    <div class="map-frame">
+      <div id="map" class="map" role="region" aria-label="Map of Jupiter, Florida"></div>
+      <svg class="compass" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="50" cy="50" r="24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="2 3"/>
+        <path d="M50 8 L56 50 L50 92 L44 50 Z" fill="currentColor"/>
+        <path d="M8 50 L50 44 L92 50 L50 56 Z" fill="currentColor" opacity="0.55"/>
+        <path d="M50 8 L56 50 L50 50 Z" fill="#9b2c1f"/>
+        <text x="50" y="6" text-anchor="middle" font-size="10" fill="currentColor">N</text>
+      </svg>
+    </div>
   </main>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"
+          integrity="sha384-SYKAG6cglRMN0RVvhNeBY0r3FYKNOJtznwA0v7B5Vp9tr31xAHsZC0DqkQ/pZDmj" crossorigin="anonymous"></script>
   <script src="js/spots.js"></script>
+  <script src="js/treasure-style.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

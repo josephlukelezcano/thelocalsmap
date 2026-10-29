@@ -1,11 +1,26 @@
-const JUPITER_CENTER = [26.934, -80.094];
+// The area the map is locked to: Tequesta in the north, Jupiter in the
+// middle, Palm Beach Gardens in the south. [west, south], [east, north].
+const AREA_BOUNDS = [
+  [-80.2, 26.78],
+  [-80.03, 27.0],
+];
 
-const map = L.map("map").setView(JUPITER_CENTER, 13);
+const map = new maplibregl.Map({
+  container: "map",
+  style: TREASURE_STYLE,
+  bounds: AREA_BOUNDS,
+  maxBounds: AREA_BOUNDS,
+  minZoom: 11,
+  maxZoom: 17,
+  dragRotate: false,
+  pitchWithRotate: false,
+  attributionControl: {
+    customAttribution: '<a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+  },
+});
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(map);
+map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-left");
+map.touchZoomRotate.disableRotation();
 
 function escapeHtml(text) {
   const div = document.createElement("div");
@@ -26,11 +41,19 @@ function popupHtml(spot) {
 }
 
 const list = document.getElementById("spot-list");
-const markers = [];
 
 SPOTS.forEach((spot) => {
-  const marker = L.marker(spot.coords).addTo(map).bindPopup(popupHtml(spot));
-  markers.push(marker);
+  // spots.js uses [latitude, longitude]; MapLibre wants [longitude, latitude].
+  const lngLat = [spot.coords[1], spot.coords[0]];
+
+  const el = document.createElement("button");
+  el.type = "button";
+  el.className = "x-marker";
+  el.textContent = "✕";
+  el.setAttribute("aria-label", spot.name);
+
+  const popup = new maplibregl.Popup({ offset: 18, maxWidth: "260px" }).setHTML(popupHtml(spot));
+  const marker = new maplibregl.Marker({ element: el }).setLngLat(lngLat).setPopup(popup).addTo(map);
 
   const item = document.createElement("li");
   const button = document.createElement("button");
@@ -39,13 +62,9 @@ SPOTS.forEach((spot) => {
     <span class="spot-name">${escapeHtml(spot.name)}</span>
     <span class="spot-meta">${escapeHtml(spot.category)} · ${escapeHtml(spot.address)}</span>`;
   button.addEventListener("click", () => {
-    map.setView(spot.coords, 16);
-    marker.openPopup();
+    map.flyTo({ center: lngLat, zoom: 15 });
+    if (!popup.isOpen()) marker.togglePopup();
   });
   item.appendChild(button);
   list.appendChild(item);
 });
-
-if (markers.length > 0) {
-  map.fitBounds(L.featureGroup(markers).getBounds(), { padding: [60, 60], maxZoom: 14 });
-}
