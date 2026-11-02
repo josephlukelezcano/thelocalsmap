@@ -18,6 +18,7 @@ A treasure-map style map of Jupiter, Tequesta and Palm Beach Gardens, Florida, s
 | Lingonberry | Coffee & Bakery | 4258 Northlake Blvd, Palm Beach Gardens, FL 33410 |
 | Little Lingonberry | Coffee & Bakery | 9810 Alternate A1A, Ste 102, Palm Beach Gardens, FL 33410 |
 
+
 ## How it works
 
 It's a plain static site with no build step:

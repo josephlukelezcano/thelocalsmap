@@ -79,5 +79,6 @@ const SPOTS = [
     address: "9810 Alternate A1A, Ste 102, Palm Beach Gardens, FL 33410",
     coords: [26.82034, -80.08237],
     note: "Lingonberry's smaller spot, with sourdough baked in front of you.",
+
   },
 ];
