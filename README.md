@@ -8,6 +8,15 @@ A treasure-map style map of Jupiter, Tequesta and Palm Beach Gardens, Florida, s
 | --- | --- | --- |
 | Perk Coffee House | Coffee | 384 Tequesta Dr, Tequesta, FL 33469 |
 | Golden Juicery | Coffee & Juice | 4050 S US Hwy 1, Jupiter, FL 33477 |
+| Crux Coffee Roasters | Coffee | 1155 Main St, Ste 118, Jupiter, FL 33458 |
+| Subculture Coffee | Coffee | 107 Front St, Jupiter, FL 33477 |
+| Oceana Coffee | Coffee | 221 N Old Dixie Hwy, Ste 1, Tequesta, FL 33469 |
+| Cones & Coffee | Coffee & Ice Cream | 997 N Hwy A1A, Ste B, Jupiter, FL 33477 |
+| I Need Coffee | Coffee | 711 W Indiantown Rd, Jupiter, FL 33458 |
+| Papa Kwans Coffee Shop | Coffee | 13882 US Hwy 1, Juno Beach, FL 33408 |
+| Subculture Coffee PGA | Coffee | 11701 Lake Victoria Gardens Ave, #5090, Palm Beach Gardens, FL 33410 |
+| Carve Surf & Coffee | Coffee & Surf Shop | 255 S US Hwy 1, Tequesta, FL 33469 |
+| The Lokomotive | Coffee | 105 Center St, Jupiter, FL 33458 |
 
 ## How it works
 
@@ -52,6 +61,16 @@ python3 -m http.server 8000
 ```
 
 Then visit http://localhost:8000.
+
+## Deploying to Cloudflare
+
+1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Import a repository** and pick this GitHub repo.
+2. Leave the build command empty. The deploy command is `npx wrangler deploy`, which reads `wrangler.jsonc` and serves the repo root as static files.
+3. Deploy. Every push to `main` redeploys the site at `https://thelocalsmap.jlezcano.workers.dev`.
+
+Use `npx wrangler deploy` as the deploy command, not `npx wrangler preview`. The preview command only makes test copies and fails with a "missing a `previews` block" error. For non-production branches (pull requests), use `npx wrangler versions upload` to get a preview link.
+
+If you use a Cloudflare **Pages** project instead, set the framework preset to **None**, leave the build command empty, and set the build output directory to `/`.
 
 ## Deploying to Netlify
 
