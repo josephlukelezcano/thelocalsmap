@@ -1,0 +1,10 @@
+// Cloudflare Workers config: serves this static site as-is (no build step).
+{
+  "name": "thelocalsmap",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": {
+    "directory": "."
+  }
+}
