@@ -53,6 +53,14 @@ python3 -m http.server 8000
 
 Then visit http://localhost:8000.
 
+## Deploying to Cloudflare
+
+1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Import a repository** and pick this GitHub repo.
+2. Leave the build command empty. The deploy command is `npx wrangler deploy`, which reads `wrangler.jsonc` and serves the repo root as static files.
+3. Deploy. Every push to `main` redeploys the site at `https://thelocalsmap.<your-subdomain>.workers.dev`.
+
+If you use a Cloudflare **Pages** project instead, set the framework preset to **None**, leave the build command empty, and set the build output directory to `/`.
+
 ## Deploying to Netlify
 
 1. In Netlify, choose **Add new site → Import an existing project** and pick this GitHub repo.
