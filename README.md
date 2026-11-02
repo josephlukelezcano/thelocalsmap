@@ -68,6 +68,8 @@ Then visit http://localhost:8000.
 2. Leave the build command empty. The deploy command is `npx wrangler deploy`, which reads `wrangler.jsonc` and serves the repo root as static files.
 3. Deploy. Every push to `main` redeploys the site at `https://thelocalsmap.jlezcano.workers.dev`.
 
+Use `npx wrangler deploy` as the deploy command, not `npx wrangler preview`. The preview command only makes test copies and fails with a "missing a `previews` block" error. For non-production branches (pull requests), use `npx wrangler versions upload` to get a preview link.
+
 If you use a Cloudflare **Pages** project instead, set the framework preset to **None**, leave the build command empty, and set the build output directory to `/`.
 
 ## Deploying to Netlify
