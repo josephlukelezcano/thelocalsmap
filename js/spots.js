@@ -67,6 +67,20 @@ const SPOTS = [
     note: "Subculture's Gardens outpost at Downtown at the Gardens.",
   },
   {
+    name: "Lingonberry",
+    category: "Coffee & Bakery",
+    address: "4258 Northlake Blvd, Palm Beach Gardens, FL 33410",
+    coords: [26.80834, -80.10205],
+    note: "Local roastery and bakery, opens at 6am with fresh pastries.",
+  },
+  {
+    name: "Little Lingonberry",
+    category: "Coffee & Bakery",
+    address: "9810 Alternate A1A, Ste 102, Palm Beach Gardens, FL 33410",
+    coords: [26.82034, -80.08237],
+    note: "Lingonberry's smaller spot, with sourdough baked in front of you.",
+  },
+  {
     name: "Carve Surf & Coffee",
     category: "Coffee & Surf Shop",
     address: "255 S US Hwy 1, Tequesta, FL 33469",
