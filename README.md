@@ -8,6 +8,13 @@ A treasure-map style map of Jupiter, Tequesta and Palm Beach Gardens, Florida, s
 | --- | --- | --- |
 | Perk Coffee House | Coffee | 384 Tequesta Dr, Tequesta, FL 33469 |
 | Golden Juicery | Coffee & Juice | 4050 S US Hwy 1, Jupiter, FL 33477 |
+| Crux Coffee Roasters | Coffee | 1155 Main St, Ste 118, Jupiter, FL 33458 |
+| Subculture Coffee | Coffee | 107 Front St, Jupiter, FL 33477 |
+| Oceana Coffee | Coffee | 221 N Old Dixie Hwy, Ste 1, Tequesta, FL 33469 |
+| Cones & Coffee | Coffee & Ice Cream | 997 N Hwy A1A, Ste B, Jupiter, FL 33477 |
+| I Need Coffee | Coffee | 711 W Indiantown Rd, Jupiter, FL 33458 |
+| Papa Kwans Coffee Shop | Coffee | 13882 US Hwy 1, Juno Beach, FL 33408 |
+| Subculture Coffee PGA | Coffee | 11701 Lake Victoria Gardens Ave, #5090, Palm Beach Gardens, FL 33410 |
 
 ## How it works
 
