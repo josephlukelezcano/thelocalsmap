@@ -17,7 +17,8 @@ A treasure-map style map of Jupiter, Tequesta and Palm Beach Gardens, Florida, s
 | Subculture Coffee PGA | Coffee | 11701 Lake Victoria Gardens Ave, #5090, Palm Beach Gardens, FL 33410 |
 | Lingonberry | Coffee & Bakery | 4258 Northlake Blvd, Palm Beach Gardens, FL 33410 |
 | Little Lingonberry | Coffee & Bakery | 9810 Alternate A1A, Ste 102, Palm Beach Gardens, FL 33410 |
-
+| Carve Surf & Coffee | Coffee & Surf Shop | 255 S US Hwy 1, Tequesta, FL 33469 |
+| The Lokomotive | Coffee | 105 Center St, Jupiter, FL 33458 |
 
 ## How it works
 
