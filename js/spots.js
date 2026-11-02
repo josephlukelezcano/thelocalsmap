@@ -66,4 +66,18 @@ const SPOTS = [
     coords: [26.84755, -80.09405],
     note: "Subculture's Gardens outpost at Downtown at the Gardens.",
   },
+  {
+    name: "Carve Surf & Coffee",
+    category: "Coffee & Surf Shop",
+    address: "255 S US Hwy 1, Tequesta, FL 33469",
+    coords: [26.9575, -80.0868],
+    note: "Surf shop and coffee bar pouring Pumphouse coffee, California-meets-Florida vibe.",
+  },
+  {
+    name: "The Lokomotive",
+    category: "Coffee",
+    address: "105 Center St, Jupiter, FL 33458",
+    coords: [26.9428, -80.0945],
+    note: "Coffee bar in a vintage 1971 Airstream, run by a local couple.",
+  },
 ];

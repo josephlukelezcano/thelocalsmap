@@ -15,6 +15,8 @@ A treasure-map style map of Jupiter, Tequesta and Palm Beach Gardens, Florida, s
 | I Need Coffee | Coffee | 711 W Indiantown Rd, Jupiter, FL 33458 |
 | Papa Kwans Coffee Shop | Coffee | 13882 US Hwy 1, Juno Beach, FL 33408 |
 | Subculture Coffee PGA | Coffee | 11701 Lake Victoria Gardens Ave, #5090, Palm Beach Gardens, FL 33410 |
+| Carve Surf & Coffee | Coffee & Surf Shop | 255 S US Hwy 1, Tequesta, FL 33469 |
+| The Lokomotive | Coffee | 105 Center St, Jupiter, FL 33458 |
 
 ## How it works
 
